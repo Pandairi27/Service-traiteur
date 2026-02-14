@@ -1,0 +1,205 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* FOND GÉNÉRAL */
+body {
+    font-family: 'Georgia', serif;
+    min-height: 100vh;
+    background-image: url("./img/Background.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #f5f5f5;
+      line-height: 1.7;
+      display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* OVERLAY SOMBRE POUR LECTURE */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.75);
+    z-index: -1;
+}
+
+/* CARTE RECETTE */
+.card {
+    width: 30%;
+    height: 600px;
+    background: rgba(0, 0, 0, 0.65);
+    border-radius: 18px;
+    padding: 35px;
+    margin-top: 10px;
+    border: 1px solid rgba(212,175,55,0.5);
+    box-shadow: 0 25px 50px rgba(0,0,0,0.6);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 35px 70px rgba(0,0,0,0.9);
+}
+
+/* TITRES DANS LA CARTE */
+.card h2 {
+    color: #d4af37;
+    margin: 15px 0 8px;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.card h3 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+
+/* TEXTE RECETTE */
+.card p {
+    font-size: 15px;
+  white-space: pre-line; /* respecte les retours à la ligne */
+    opacity: 0.95;
+}
+
+.card img {
+  width: 80%;
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+    .title h1 {
+    font-size: 30px;
+    }
+
+    .card {
+    padding: 25px;
+}
+}
+.main-container {
+  background: url(./img/Background.jpg) center/cover;
+  min-height: 100vh;
+}
+
+h2 {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-align: center;
+  /* Les tailles de polices doivent être en rem */
+  font-size: 2.5rem;
+  text-shadow: 7px 2px 7px #0000002b;
+  color: #7299a4;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+main {
+  min-height: 500px;
+  /* width = largeur */
+  width: 90%;
+  background: rgba(203, 196, 196, 0.564);
+  /* Center une boite  */
+  margin: 0 auto;
+  border: 2px solid rgb(31, 31, 131);
+  border-radius: 20px;
+  box-shadow: 0px 0px 20px 4px #457d7f;
+  padding: 15px;
+}
+h3 {
+  margin: 0;
+}
+  /* Grid */
+  
+  .grid-container {
+    display: grid;
+    grid-template-columns: 30% 70%;
+  }
+  .grid img {
+    width: 80%;
+    margin: 20px auto;
+  }
+  form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 0.5fr;
+    grid-template-areas: 
+     "i1 i2"
+     "em em"
+     "ta ta";
+  }
+  input, textarea {
+    margin: 5px;
+    border: 1px solid darkblue;
+    padding: 10px;
+    font-size: 1.1rem;
+    border-radius: 5px;
+  }
+
+  textarea {
+    grid-area: ta;
+    height: 40px;
+    resize: none;
+  }
+
+  #btn-submit {
+    grid-area: bt;
+    cursor: pointer;
+    background: cyan;
+    transition: 0.2s;
+
+  }
+
+  #btn-submit:hover {
+    background: rgb(25, 37, 68);
+    color: white;
+    font-weight: bold;
+  }
+  
+@media screen and (max-width: 860px) {
+  .grid-container {
+    display: block;
+  }
+  .grid img {
+    width: 100%;
+  }
+  .grid-container img {
+    width: 40%;
+  }
+}
+ form {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+     "i1"
+     "i2"
+     "em"
+     "ta"
+     "bt";
+  }
+  input, textarea {
+    font-size: 0.8rem;
+  }
+a{
+  text-decoration: none;
+  background: #9cd3d7;
+  color: #000000;
+  border: 2;
+  border-radius: 5px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+p {font-size: x-large;
+}
+.nav {
+  background: rgb(67, 88, 93);
+  border-radius: 3%;
+
+ }
